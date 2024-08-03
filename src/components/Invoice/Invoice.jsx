@@ -37,7 +37,7 @@ const Invoice = () => {
   const handleGenerateInvoice = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:4001/user/get/${firebaseId}`);
+      const response = await axios.get(`https://billingsystembackend.onrender.com/user/get/${firebaseId}`);
       const transactionId = generateTransactionId(); // Generate the transaction ID here
       const currentDate = new Date();
       const invoiceDataWithTransactionId = {
