@@ -1,0 +1,47 @@
+/* Invoice.scss */
+
+.app__invoice {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .generate-invoice-button,
+  .download-invoice-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+  }
+  
+  .generate-invoice-button:hover,
+  .download-invoice-button:hover {
+    background-color: green;
+  }
+  
+  .invoice-content {
+    margin-top: 20px;
+  }
+  
+  .invoice-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .invoice-content table, .invoice-content td, .invoice-content th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .invoice-content th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f2f2f2;
+    color: black;
+  }
+  
