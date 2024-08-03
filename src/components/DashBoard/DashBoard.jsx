@@ -26,7 +26,7 @@ const Dashboard = () => {
 
   const fetchStorageData = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:4001/user/get/${userId}`);
+      const response = await axios.get(`https://billingsystembackend.onrender.com/user/get/${userId}`);
       const user = response.data;
       setTotalStorage(user.totalAssets);
       setUsedStorage(user.usedAssets);
@@ -40,7 +40,7 @@ const Dashboard = () => {
     const additionalUsedAssets = 10; // Increase used storage by 10
 
     try {
-      const response = await axios.put(`http://localhost:4001/user/updateAssets`, {
+      const response = await axios.put(`https://billingsystembackend.onrender.com/user/updateAssets`, {
         userId: firebaseId,
         additionalUsedAssets: additionalUsedAssets
       });
@@ -50,7 +50,7 @@ const Dashboard = () => {
       setPercentage((updatedUsedStorage / totalStorage) * 100);
 
       // Update Google Sheet
-      await axios.post('http://localhost:4001/updateGoogleSheet');
+      await axios.post('https://billingsystembackend.onrender.com/updateGoogleSheet');
     } catch (error) {
       console.error('Error updating assets:', error);
     }
