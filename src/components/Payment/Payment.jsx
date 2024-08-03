@@ -69,7 +69,7 @@ const Payment = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:4001/user/add', {
+      const response = await axios.post('https://billingsystembackend.onrender.com/user/add', {
         userId: firebaseId,
         name: userName,
         planType: selectedPlan.name,
